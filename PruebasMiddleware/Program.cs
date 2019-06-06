@@ -30,8 +30,8 @@ namespace PruebasMiddleware
                         //Ejemplo de filto
                         //El segundo AddFilter especifica el proveedor de depuración mediante su nombre de tipo. 
                         //El primer AddFilter se aplica a todos los proveedores, dado que no especifica un tipo de proveedor.
-                       logging.AddFilter("System", LogLevel.Debug);
-                       logging.AddFilter<DebugLoggerProvider>("Microsoft", LogLevel.Trace);
+                       //logging.AddFilter("System", LogLevel.Debug);
+                       //logging.AddFilter<DebugLoggerProvider>("Microsoft", LogLevel.Trace);
                     }
                 );
     }

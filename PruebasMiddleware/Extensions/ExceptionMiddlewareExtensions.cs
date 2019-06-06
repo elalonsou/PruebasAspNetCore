@@ -1,18 +1,21 @@
 using PruebasMiddleware.Models;
-using LoggerService;
+//using LoggerService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using System.Net;
-
+using Microsoft.Extensions.Logging;
 namespace PruebasMiddleware.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
+
         //Al poner this delante de IApplicationBuilder se esta configurando como una extension
         //del tipo IApplicationBuilder de forma que las instancias de este tipo podran usar
         //el metodo de la forma     app.ConfigureExceptionHandler()
-        public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILoggerManager logger)
+
+        //public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILoggerManager logger)
+        public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILogger<Startup> logger)
         {
             app.UseExceptionHandler(appError =>
             {

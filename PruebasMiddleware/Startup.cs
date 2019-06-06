@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PruebasMiddleware.Extensions;
+
 
 namespace PruebasMiddleware
 {
@@ -30,7 +32,7 @@ namespace PruebasMiddleware
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
@@ -47,6 +49,11 @@ namespace PruebasMiddleware
             app.UseRouting();
 
             app.UseAuthorization();
+
+            //app.ConfigureExceptionHandler();
+            logger.LogInformation("Configurando");
+
+            app.ConfigureExceptionHandler(logger);
 
             app.UseEndpoints(endpoints =>
             {
