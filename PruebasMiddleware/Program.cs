@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Debug;
 
@@ -25,13 +26,17 @@ namespace PruebasMiddleware
                 })
                 .ConfigureLogging((hostingContext,logging) =>
                     {
+                        logging.ClearProviders();
+                        logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
                         logging.AddConsole();
                         logging.AddDebug();
+                        logging.AddEventSourceLogger();
+                        logging.AddFile(hostingContext.Configuration.GetSection("Logging"));
                         //Ejemplo de filto
                         //El segundo AddFilter especifica el proveedor de depuración mediante su nombre de tipo. 
                         //El primer AddFilter se aplica a todos los proveedores, dado que no especifica un tipo de proveedor.
-                       //logging.AddFilter("System", LogLevel.Debug);
-                       //logging.AddFilter<DebugLoggerProvider>("Microsoft", LogLevel.Trace);
+                        //logging.AddFilter("System", LogLevel.Debug);
+                        //logging.AddFilter<DebugLoggerProvider>("Microsoft", LogLevel.Trace);
                     }
                 );
     }
