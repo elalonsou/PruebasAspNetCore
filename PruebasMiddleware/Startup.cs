@@ -29,6 +29,10 @@ namespace PruebasMiddleware
         {
             services.AddControllers()
                 .AddNewtonsoftJson();
+
+            // --------- Configuracion Personalizada -------
+            // Con esta opcion usamos la configuracion para mapear la configuracion en la clase EjemploConfiguracion
+            services.Configure<EjemploConfiguracion>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +47,7 @@ namespace PruebasMiddleware
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
 
             app.UseHttpsRedirection();
 
