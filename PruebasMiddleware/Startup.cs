@@ -50,9 +50,10 @@ namespace PruebasMiddleware
 
             app.UseAuthorization();
 
-            //app.ConfigureExceptionHandler();
+            //Ejemplo registrando un mensaje en el Log
             logger.LogInformation("Configurando");
 
+            //Usamos la extension personalizada (Clase) para registrar las excepciones usando el logger.
             app.ConfigureExceptionHandler(logger);
 
             app.UseEndpoints(endpoints =>

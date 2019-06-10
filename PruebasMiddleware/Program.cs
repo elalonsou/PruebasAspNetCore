@@ -27,11 +27,15 @@ namespace PruebasMiddleware
                 .ConfigureLogging((hostingContext,logging) =>
                     {
                         logging.ClearProviders();
+                        //Para coger la configuracion del fichero de configuración.
                         logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
                         logging.AddConsole();
                         logging.AddDebug();
                         logging.AddEventSourceLogger();
+                        //Esta extension es de un paquete serialicer
                         logging.AddFile(hostingContext.Configuration.GetSection("Logging"));
+                        
+                        
                         //Ejemplo de filto
                         //El segundo AddFilter especifica el proveedor de depuración mediante su nombre de tipo. 
                         //El primer AddFilter se aplica a todos los proveedores, dado que no especifica un tipo de proveedor.

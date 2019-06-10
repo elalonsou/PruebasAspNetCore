@@ -14,7 +14,6 @@ namespace PruebasMiddleware.Extensions
         //del tipo IApplicationBuilder de forma que las instancias de este tipo podran usar
         //el metodo de la forma     app.ConfigureExceptionHandler()
 
-        //public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILoggerManager logger)
         public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILogger<Startup> logger)
         {
             app.UseExceptionHandler(appError =>
