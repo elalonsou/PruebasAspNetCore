@@ -3,3 +3,5 @@ El objetivo del repositorio es disponer de las diferentes pruebas y códigos de e
 
 ### Proyectos
 * [PruebasColeccionGenerica](PruebaColeccionGenerica/Readme.md)
+* [PruebaSeguridadWebAPI](PruebaSeguridadWebAPI/Readme.md)
+* [PruebasMiddleware](PruebasMiddleware/Readme.md)
