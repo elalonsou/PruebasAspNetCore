@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PruebasAPI_CRUD_EntityFramework.Services;
-using PruebasAPI_CRUD_EntityFramework.Data;
+//using PruebasAPI_CRUD_EntityFramework.Data;
 
 namespace PruebasAPI_CRUD_EntityFramework
 {
@@ -30,11 +30,11 @@ namespace PruebasAPI_CRUD_EntityFramework
         {
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=DemoEFCoreEnASPNET;Integrated Security=True")
+            options.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=PruebasAPI_CRUD_EntityFramework;Integrated Security=True")
              .EnableSensitiveDataLogging(true));
 
-            services.AddDbContext<PruebasAPI_CRUD_EntityFrameworkContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("PruebasAPI_CRUD_EntityFrameworkContext")));
+            //services.AddDbContext<PruebasAPI_CRUD_EntityFrameworkContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("PruebasAPI_CRUD_EntityFrameworkContext")));
                 
         }
 

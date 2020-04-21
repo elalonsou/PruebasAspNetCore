@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PruebasAPI_CRUD_EntityFramework.Models;
 
+//--------------------------------------------------------------------------------------
+//Contexto generado automaticamente al crear el controlador mediante el asistente de Visual Studio.
 namespace PruebasAPI_CRUD_EntityFramework.Data
 {
     public class PruebasAPI_CRUD_EntityFrameworkContext : DbContext
