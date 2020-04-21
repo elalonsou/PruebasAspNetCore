@@ -8,6 +8,8 @@ namespace PruebasAPI_CRUD_EntityFramework.Models
 {
     public class Cancion
     {
+        public int Id { get; set; }
+
         [Required]
         public string Titulo { get; set; }
 
