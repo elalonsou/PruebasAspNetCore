@@ -49,7 +49,28 @@ namespace PruebasAPI_CRUD_EntityFramework.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Cancion>> DeleteCancion(int id)
         {
+            //Primero Buscamos el registro
+            //Otra forma          var cancion = await _context.Cancion.FindAsync(id);
+            Cancion cancion =  await _context.Canciones.Where(x => x.Id == id).FirstOrDefaultAsync();
+            if (cancion == null)
+            {
+                return NotFound();
+            }
+
+            _context.Canciones.Remove(cancion);
+            await _context.SaveChangesAsync();
+
+            //Se devuelve el registro borrado.
+            //En el CRUD autogenerado por VS hace return sin Ok
+            return Ok(cancion);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<Cancion>> PutCancion()
+        {
+            //TODO Put Cancion
             throw new NotImplementedException();
         }
+
     }
 }
