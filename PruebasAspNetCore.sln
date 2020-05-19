@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaColeccionGenerica", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebasMiddleware", "PruebasMiddleware\PruebasMiddleware.csproj", "{E5ABC0FA-0CEA-475D-B268-3534F16EB446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasAPI_CRUD_EntityFramework", "PruebasAPI_CRUD_EntityFramework\PruebasAPI_CRUD_EntityFramework.csproj", "{3A158B0A-24C6-4459-9797-0D575F8F84F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebasAPI_CRUD_EntityFramework", "PruebasAPI_CRUD_EntityFramework\PruebasAPI_CRUD_EntityFramework.csproj", "{3A158B0A-24C6-4459-9797-0D575F8F84F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaConfiguracionASP.NET_Core", "PruebaConfiguracionASP.NET_Core\PruebaConfiguracionASP.NET_Core.csproj", "{DE2B9231-13C7-4327-BF52-3E4AFF51B826}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,18 @@ Global
 		{3A158B0A-24C6-4459-9797-0D575F8F84F9}.Release|x64.Build.0 = Release|Any CPU
 		{3A158B0A-24C6-4459-9797-0D575F8F84F9}.Release|x86.ActiveCfg = Release|Any CPU
 		{3A158B0A-24C6-4459-9797-0D575F8F84F9}.Release|x86.Build.0 = Release|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Debug|x64.Build.0 = Debug|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Release|x64.ActiveCfg = Release|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Release|x64.Build.0 = Release|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE2B9231-13C7-4327-BF52-3E4AFF51B826}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

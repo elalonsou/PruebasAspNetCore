@@ -1,0 +1,31 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:3864",
+      "sslPort": 0
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "commandLineArgs": "\"Argumento1=Argumento consola valor1\" ConsolaSeccion:ArgumentoA=\"Argumento A Seccion\" ConsolaSeccion:ArgumentoB=\"Argumento B Seccion\"",
+      "launchBrowser": true,
+      "launchUrl": "api/PruebasConfiguracion",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "PruebaConfiguracionASP.NET_Core": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/PruebasConfiguracion",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}
